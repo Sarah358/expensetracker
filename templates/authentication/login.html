@@ -1,0 +1,46 @@
+{% extends 'base_auth.html' %}
+{% load static %}
+
+
+
+{% block content %}
+
+
+<div class="container">
+<div class="row">
+<div class="col-md-6">
+<div class="card">
+
+<form  action="{% url 'login' %}" method="post" class="box" >
+{% csrf_token %}
+    <h1>Login</h1>
+    <p class="text-muted"> Please enter your username and password!</p> 
+
+    {% include 'partials/_messages.html' %}
+    <input type="text" 
+            placeholder="Username"
+              name="username"
+              placeholder="username"
+              id="usernameField"
+              value="{{fieldValues.username}}"
+    /> 
+    <input
+             placeholder="Password"
+            type="password"
+              name="password"
+              placeholder="Password"
+              class="form-control form-control-sm"
+              id="passwordField"
+     /> 
+    <p class="text-center text-muted mt-5 mb-0">You dont have an account?  <a href="{% url 'register' %}" class="fw-bold text-danger text-bold"><u> Register here </u></a> </p> 
+    <input type="submit" name="" value="Login">
+   
+</form>
+</div>
+</div>
+</div>
+</div>
+
+
+{% endblock content %}
+

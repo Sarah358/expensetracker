@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+<div class="row mt-3">
+<div class="col-md-4 mt-3 mb-2">
+<h4>Export data as a Csv file:</h4>
+</div>
+<div class="col-md-4 mt-2">
+<a href="{% url 'export_csv'%}" class="btn btn-primary btn-lg">Export csv</a>
+</div>
+</div>
+<hr>
+<div class="row mt-3">
+<div class="col-md-4 mt-3 mb-2">
+<h4>Export data as a PDF file:</h4>
+</div>
+<div class="col-md-4 mt-2">
+<a href="{% url 'export_pdf'%}" class="btn btn-warning btn-lg">Export pdf</a>
+</div>
+</div>
+</div>
+
+{% endblock content %}
