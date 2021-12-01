@@ -1,0 +1,5 @@
+# expensetracker
+
+## requirements
+django
+json
