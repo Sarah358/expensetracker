@@ -3,3 +3,4 @@
 ## requirements
 django
 json
+validate-email
